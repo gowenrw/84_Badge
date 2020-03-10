@@ -72,15 +72,25 @@ Wire Wire Line
 Wire Wire Line
 	7000 3050 7750 3050
 $Comp
-L 0_local:C_1206 C1
+L 0_local:C_1206 C?
 U 1 1 5E68595E
 P 8550 2950
-F 0 "C1" H 8665 2996 50  0000 L CNN
-F 1 "0.1uF/100nF" H 8665 2905 50  0000 L CNN
+F 0 "C?" H 8665 2996 50  0000 L CNN
+F 1 "C_1206" H 8665 2905 50  0000 L CNN
 F 2 "0_local:C_1206_3216Metric" V 8738 2900 50  0001 C CNN
 F 3 "~" H 8550 2950 50  0001 C CNN
-F 4 "1206" H 8650 2800 50  0000 L CNN "Form"
 	1    8550 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L 0_local:C_1206 C?
+U 1 1 5E685DA6
+P 9200 2950
+F 0 "C?" H 9315 2996 50  0000 L CNN
+F 1 "C_1206" H 9315 2905 50  0000 L CNN
+F 2 "0_local:C_1206_3216Metric" V 9388 2900 50  0001 C CNN
+F 3 "~" H 9200 2950 50  0001 C CNN
+	1    9200 2950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -121,6 +131,8 @@ Wire Wire Line
 	7150 1100 7300 1100
 Wire Wire Line
 	7750 1350 7750 1650
+Wire Wire Line
+	7750 2250 7750 2450
 Connection ~ 7750 2650
 Wire Wire Line
 	7750 2650 7900 2650
@@ -133,6 +145,18 @@ Wire Wire Line
 Connection ~ 7750 3050
 Wire Wire Line
 	7750 3050 7900 3050
+Wire Wire Line
+	8550 3200 9200 3200
+Wire Wire Line
+	9200 3200 9200 3100
+Connection ~ 8550 3200
+Wire Wire Line
+	9200 2800 9200 2450
+Wire Wire Line
+	9200 2450 7750 2450
+Connection ~ 7750 2450
+Wire Wire Line
+	7750 2450 7750 2650
 Wire Wire Line
 	8550 2800 8550 2750
 Wire Wire Line
@@ -198,30 +222,4 @@ Text Notes 4300 1500 0    50   ~ 0
 SW1 switches between USB and BAT power.\nThis prevents an over voltage if both are connected.
 Text Notes 8450 2100 0    50   ~ 0
 SW2 controls a pull up resistor on D+\nPress and hold SW2 while USB is connected\nto put IC1 into programming mode.
-Wire Wire Line
-	7750 2250 7750 2400
-$Comp
-L 0_local:C_1206 C2
-U 1 1 5E6DA8BA
-P 9350 2950
-F 0 "C2" H 9465 2996 50  0000 L CNN
-F 1 "0.1uF/100nF" H 9465 2905 50  0000 L CNN
-F 2 "0_local:C_1206_3216Metric" V 9538 2900 50  0001 C CNN
-F 3 "~" H 9350 2950 50  0001 C CNN
-F 4 "1206" H 9450 2800 50  0000 L CNN "Form"
-	1    9350 2950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9350 3200 9350 3100
-Wire Wire Line
-	8550 3200 9350 3200
-Connection ~ 8550 3200
-Wire Wire Line
-	7750 2400 9350 2400
-Wire Wire Line
-	9350 2400 9350 2800
-Connection ~ 7750 2400
-Wire Wire Line
-	7750 2400 7750 2650
 $EndSCHEMATC
