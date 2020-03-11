@@ -18,6 +18,6 @@ This is the file structure of this repository
 * [/eda/](./eda/) - Electronic Design Automation files (i.e. KiCad)
   * ./dev/ - KiCad project folder for initial development PCB(s)
   * ./prod/ - KiCad project folder for the production PCB(s)
-* [/reference/](./reference/) - Documentation pulled from other sources related to components
+* [/reference_parts/](./reference_parts/) - Documentation pulled from other sources related to components
 * [./README.md](/README.md) - This File
 * [./LICENSE](/LICENSE) - Currently set to MIT
