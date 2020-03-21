@@ -6,7 +6,31 @@ K cap capacitor
 F ~
 $ENDCMP
 #
+$CMP C_0603
+D Unpolarized capacitor
+K cap capacitor
+F ~
+$ENDCMP
+#
+$CMP C_0805
+D Unpolarized capacitor
+K cap capacitor
+F ~
+$ENDCMP
+#
 $CMP C_1206
+D Unpolarized capacitor
+K cap capacitor
+F ~
+$ENDCMP
+#
+$CMP C_Disc_D3
+D Unpolarized capacitor
+K cap capacitor
+F ~
+$ENDCMP
+#
+$CMP C_Rect_L5
 D Unpolarized capacitor
 K cap capacitor
 F ~
@@ -54,6 +78,18 @@ K AVR 32-bit Cortex M0 Microcontroller Trinket
 F https://www.adafruit.com/product/3500
 $ENDCMP
 #
+$CMP LED_0603
+D Light emitting diode
+K LED diode
+F ~
+$ENDCMP
+#
+$CMP LED_0805
+D Light emitting diode
+K LED diode
+F ~
+$ENDCMP
+#
 $CMP LED_1206
 D Light emitting diode
 K LED diode
@@ -93,6 +129,18 @@ $ENDCMP
 $CMP LED_THT_8mm
 D Light emitting diode
 K LED diode
+F ~
+$ENDCMP
+#
+$CMP R_0603
+D Resistor SMD 1206
+K R res resistor 1206
+F ~
+$ENDCMP
+#
+$CMP R_0805
+D Resistor SMD 1206
+K R res resistor 1206
 F ~
 $ENDCMP
 #
