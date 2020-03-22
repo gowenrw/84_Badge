@@ -133,20 +133,20 @@ F ~
 $ENDCMP
 #
 $CMP R_0603
-D Resistor SMD 1206
-K R res resistor 1206
+D Resistor SMD
+K R res resistor
 F ~
 $ENDCMP
 #
 $CMP R_0805
-D Resistor SMD 1206
-K R res resistor 1206
+D Resistor SMD
+K R res resistor
 F ~
 $ENDCMP
 #
 $CMP R_1206
-D Resistor SMD 1206
-K R res resistor 1206
+D Resistor SMD
+K R res resistor
 F ~
 $ENDCMP
 #
