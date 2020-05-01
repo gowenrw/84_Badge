@@ -1,16 +1,1219 @@
 EESchema Schematic File Version 4
 EELAYER 29 0
 EELAYER END
-$Descr A4 11693 8268
+$Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "84_Badge"
-Date ""
-Rev ""
+Date "2020-04-30"
+Rev "1"
 Comp "Created by @alt_bier a.k.a. Richard Gowen"
 Comment1 "84badge.com"
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L 0_local:IC_CH552G IC1
+U 1 1 5E67B430
+P 2650 1350
+F 0 "IC1" H 2650 2047 79  0000 C CNB
+F 1 "IC_CH552G" H 2650 1934 50  0000 C CNB
+F 2 "0_local:IC_SOIC-16_3.9x9.9mm_Pitch1.27mm" H 1850 300 50  0001 L CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/1812131556_Jiangsu-Qin-Heng-CH552G_C111292.pdf" H 2300 2150 50  0001 C CNN
+	1    2650 1350
+	1    0    0    -1
+$EndComp
+$Comp
+L 0_local:USB_B_Micro J1
+U 1 1 5E67D8B4
+P 1000 3100
+F 0 "J1" H 1057 3567 50  0000 C CNN
+F 1 "USB_B_Micro" H 1057 3476 50  0000 C CNN
+F 2 "0_local:USB_Micro-B_Jing" V 700 3050 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/Jing-Extension-of-the-Electronic-Co-LCSC-micro-5PAll-posts-are-not-guided-Flat-welding-High-temperature_C77238.pdf" H 1150 3050 50  0001 C CNN
+	1    1000 3100
+	1    0    0    -1
+$EndComp
+Text GLabel 1600 2900 2    50   Input ~ 0
+USB-PWR
+Text GLabel 1600 3100 2    50   Input ~ 0
+D+
+Text GLabel 1600 3200 2    50   Input ~ 0
+D-
+Text GLabel 1600 3550 2    50   Input ~ 0
+GND
+NoConn ~ 1300 3300
+Wire Wire Line
+	1300 2900 1600 2900
+Wire Wire Line
+	1300 3100 1450 3100
+Wire Wire Line
+	1300 3200 1600 3200
+Wire Wire Line
+	1000 3500 1000 3550
+Wire Wire Line
+	900  3500 900  3550
+Wire Wire Line
+	900  3550 1000 3550
+Connection ~ 1000 3550
+Wire Wire Line
+	1000 3550 1600 3550
+Text GLabel 4250 900  2    50   Input ~ 0
+V33
+Text GLabel 4250 1100 2    50   Input ~ 0
+VCC
+Text GLabel 4250 1300 2    50   Input ~ 0
+GND
+Wire Wire Line
+	1450 3100 1450 3000
+Wire Wire Line
+	1450 3000 2050 3000
+Wire Wire Line
+	2050 3000 2050 3050
+Connection ~ 1450 3100
+Wire Wire Line
+	1450 3100 1600 3100
+Text GLabel 4250 1500 2    50   Input ~ 0
+D-
+Text GLabel 4250 1700 2    50   Input ~ 0
+D+
+Wire Wire Line
+	4000 1500 4250 1500
+Wire Wire Line
+	4000 1700 4250 1700
+$Comp
+L 0_local:Conn_01x02 J2
+U 1 1 5E6957B4
+P 950 4350
+F 0 "J2" H 868 4025 50  0000 C CNN
+F 1 "Conn_01x02" H 868 4116 50  0000 C CNN
+F 2 "0_local:Conn_Pin_Header_Straight_1x02_Pitch2.54mm" H 1100 4050 50  0001 C CNN
+F 3 "~" H 950 4350 50  0001 C CNN
+	1    950  4350
+	-1   0    0    1
+$EndComp
+Text GLabel 1300 4250 2    50   Input ~ 0
+BAT-PWR
+Text GLabel 1300 4350 2    50   Input ~ 0
+GND
+Wire Wire Line
+	1150 4250 1300 4250
+Wire Wire Line
+	1150 4350 1300 4350
+Text GLabel 2950 2950 0    50   Input ~ 0
+VCC
+Text GLabel 3850 3050 2    50   Input ~ 0
+USB-PWR
+Text GLabel 3850 2850 2    50   Input ~ 0
+BAT-PWR
+Wire Wire Line
+	3600 2850 3850 2850
+Wire Wire Line
+	3600 3050 3850 3050
+Wire Wire Line
+	2950 2950 3200 2950
+Text GLabel 4250 1900 2    50   Input ~ 0
+P3.4
+Text Notes 2700 3400 0    50   ~ 0
+SW1 switches between USB and BAT power.\nThis prevents an over voltage if both are connected.\nNote pins 1 and 3 can be swapped per pcb layout
+Text Notes 2700 3750 0    50   ~ 0
+SW2 applies a pull up resistor R1 on D+\nPress and hold SW2 while USB is connected\nto put IC1 into programming mode.
+$Comp
+L 0_local:R_0603 R1
+U 1 1 5E767ED4
+P 2050 3200
+F 0 "R1" H 2120 3291 50  0000 L CNN
+F 1 "10k Ohms" H 2120 3200 50  0000 L CNN
+F 2 "0_local:R_0603_1608Metric" V 2180 3150 50  0001 C CNN
+F 3 "~" H 2000 3200 50  0001 C CNN
+F 4 "0603" H 2120 3109 50  0000 L CNN "Form"
+	1    2050 3200
+	1    0    0    -1
+$EndComp
+$Comp
+L 0_local:C_0603 C1
+U 1 1 5E768601
+P 2950 4550
+F 0 "C1" V 3292 4550 50  0000 C CNN
+F 1 "0.1uF/100nF" V 3201 4550 50  0000 C CNN
+F 2 "0_local:C_0603_1608Metric" V 3138 4500 50  0001 C CNN
+F 3 "~" H 2950 4550 50  0001 C CNN
+F 4 "0603" V 3110 4550 50  0000 C CNN "Form"
+	1    2950 4550
+	0    -1   -1   0
+$EndComp
+$Comp
+L 0_local:C_0603 C2
+U 1 1 5E76AEA8
+P 4150 4550
+F 0 "C2" V 4492 4550 50  0000 C CNN
+F 1 "0.1uF/100nF" V 4401 4550 50  0000 C CNN
+F 2 "0_local:C_0603_1608Metric" V 4338 4500 50  0001 C CNN
+F 3 "~" H 4150 4550 50  0001 C CNN
+F 4 "0603" V 4310 4550 50  0000 C CNN "Form"
+	1    4150 4550
+	0    -1   -1   0
+$EndComp
+Text Notes 2700 4050 0    50   ~ 0
+C1 and C2 provide decoupling (noise suppression)\non V33 and VCC respectivley
+Wire Wire Line
+	4000 1300 4250 1300
+Text GLabel 3250 4550 2    50   Input ~ 0
+GND
+Text GLabel 4450 4550 2    50   Input ~ 0
+GND
+Text Notes 1850 4900 0    50   Italic 10
+Boilerplate configuration for the CH552G IC
+Text GLabel 4250 2100 2    50   Input ~ 0
+P3.3
+Text GLabel 4250 2300 2    50   Input ~ 0
+P1.1
+Wire Wire Line
+	4000 1900 4250 1900
+Wire Wire Line
+	4000 2100 4250 2100
+Wire Wire Line
+	4000 2300 4250 2300
+Text GLabel 1050 2300 0    50   Input ~ 0
+P3.0
+Wire Wire Line
+	1050 2300 1300 2300
+Text GLabel 1050 2100 0    50   Input ~ 0
+P3.1
+Text GLabel 1050 1900 0    50   Input ~ 0
+RST
+Text GLabel 1050 1700 0    50   Input ~ 0
+P1.7
+Text GLabel 1050 1500 0    50   Input ~ 0
+P1.6
+Text GLabel 1050 1300 0    50   Input ~ 0
+P1.5
+Text GLabel 1050 1100 0    50   Input ~ 0
+P1.4
+Text GLabel 1050 900  0    50   Input ~ 0
+P3.2
+Wire Wire Line
+	1050 2100 1300 2100
+Wire Wire Line
+	1050 1900 1300 1900
+Wire Wire Line
+	1050 1700 1300 1700
+Wire Wire Line
+	1050 1500 1300 1500
+Wire Wire Line
+	1050 1300 1300 1300
+Wire Wire Line
+	1050 1100 1300 1100
+Wire Wire Line
+	1050 900  1300 900
+Text GLabel 3850 4550 0    50   Input ~ 0
+VCC
+Wire Wire Line
+	4000 1100 4250 1100
+Wire Wire Line
+	4300 4550 4450 4550
+Wire Wire Line
+	3850 4550 4000 4550
+Wire Wire Line
+	3100 4550 3250 4550
+Wire Wire Line
+	2650 4550 2800 4550
+Text GLabel 2650 4550 0    50   Input ~ 0
+V33
+Wire Wire Line
+	4000 900  4250 900
+Text GLabel 2050 4250 3    50   Input ~ 0
+V33
+Wire Wire Line
+	2050 3350 2050 3500
+Wire Wire Line
+	2050 4100 2050 4250
+Text Notes 700  3900 0    50   ~ 0
+J1 USB for program & power\nJ2 Terminal for battery power
+Wire Notes Line
+	600  4950 4800 4950
+Wire Notes Line
+	4800 4950 4800 550
+Wire Notes Line
+	4800 550  600  550
+Wire Notes Line
+	600  550  600  4950
+Text GLabel 5600 1850 0    50   Input ~ 0
+P3.0
+$Comp
+L 0_local:R_0603 R301
+U 1 1 5E7CB62A
+P 6250 1100
+F 0 "R301" V 6550 1100 50  0000 C CNN
+F 1 "220 Ohms" V 6450 1100 50  0000 C CNN
+F 2 "0_local:R_0603_1608Metric" V 6380 1050 50  0001 C CNN
+F 3 "~" H 6200 1100 50  0001 C CNN
+F 4 "0603" V 6350 1100 50  0000 C CNN "Form"
+	1    6250 1100
+	0    -1   -1   0
+$EndComp
+Wire Wire Line
+	5850 1100 6100 1100
+Wire Wire Line
+	5600 1850 5850 1850
+Wire Wire Line
+	6400 1100 6650 1100
+$Comp
+L 0_local:LED_0603 D301
+U 1 1 5E7DA9EF
+P 6800 1100
+F 0 "D301" H 6800 1400 50  0000 C CNN
+F 1 "Yellow" H 6800 1300 50  0000 C CNN
+F 2 "0_local:LED_0603_1608Metric" H 6800 850 50  0001 C CNN
+F 3 "~" H 6800 1100 50  0001 C CNN
+F 4 "0603" H 6800 1200 50  0000 C CNN "Form"
+	1    6800 1100
+	-1   0    0    -1
+$EndComp
+Wire Wire Line
+	6950 1100 7200 1100
+Text GLabel 7450 1850 2    50   Input ~ 0
+GND
+$Comp
+L 0_local:R_0603 R302
+U 1 1 5E7EDE0E
+P 6250 1600
+F 0 "R302" V 6550 1600 50  0000 C CNN
+F 1 "220 Ohms" V 6450 1600 50  0000 C CNN
+F 2 "0_local:R_0603_1608Metric" V 6380 1550 50  0001 C CNN
+F 3 "~" H 6200 1600 50  0001 C CNN
+F 4 "0603" V 6350 1600 50  0000 C CNN "Form"
+	1    6250 1600
+	0    -1   -1   0
+$EndComp
+Wire Wire Line
+	5850 1600 6100 1600
+Wire Wire Line
+	6400 1600 6650 1600
+$Comp
+L 0_local:LED_0603 D302
+U 1 1 5E7EDE17
+P 6800 1600
+F 0 "D302" H 6800 1900 50  0000 C CNN
+F 1 "Yellow" H 6800 1800 50  0000 C CNN
+F 2 "0_local:LED_0603_1608Metric" H 6800 1350 50  0001 C CNN
+F 3 "~" H 6800 1600 50  0001 C CNN
+F 4 "0603" H 6800 1700 50  0000 C CNN "Form"
+	1    6800 1600
+	-1   0    0    -1
+$EndComp
+Wire Wire Line
+	6950 1600 7200 1600
+$Comp
+L 0_local:R_0603 R303
+U 1 1 5E7EF4F0
+P 6250 2100
+F 0 "R303" V 6550 2100 50  0000 C CNN
+F 1 "220 Ohms" V 6450 2100 50  0000 C CNN
+F 2 "0_local:R_0603_1608Metric" V 6380 2050 50  0001 C CNN
+F 3 "~" H 6200 2100 50  0001 C CNN
+F 4 "0603" V 6350 2100 50  0000 C CNN "Form"
+	1    6250 2100
+	0    -1   -1   0
+$EndComp
+Wire Wire Line
+	5850 2100 6100 2100
+Wire Wire Line
+	6400 2100 6650 2100
+$Comp
+L 0_local:LED_0603 D303
+U 1 1 5E7EF4F9
+P 6800 2100
+F 0 "D303" H 6800 2400 50  0000 C CNN
+F 1 "Yellow" H 6800 2300 50  0000 C CNN
+F 2 "0_local:LED_0603_1608Metric" H 6800 1850 50  0001 C CNN
+F 3 "~" H 6800 2100 50  0001 C CNN
+F 4 "0603" H 6800 2200 50  0000 C CNN "Form"
+	1    6800 2100
+	-1   0    0    -1
+$EndComp
+Wire Wire Line
+	6950 2100 7200 2100
+$Comp
+L 0_local:R_0603 R304
+U 1 1 5E7F0FAE
+P 6250 2600
+F 0 "R304" V 6550 2600 50  0000 C CNN
+F 1 "220 Ohms" V 6450 2600 50  0000 C CNN
+F 2 "0_local:R_0603_1608Metric" V 6380 2550 50  0001 C CNN
+F 3 "~" H 6200 2600 50  0001 C CNN
+F 4 "0603" V 6350 2600 50  0000 C CNN "Form"
+	1    6250 2600
+	0    -1   -1   0
+$EndComp
+Wire Wire Line
+	5850 2600 6100 2600
+Wire Wire Line
+	6400 2600 6650 2600
+$Comp
+L 0_local:LED_0603 D304
+U 1 1 5E7F0FB7
+P 6800 2600
+F 0 "D304" H 6800 2900 50  0000 C CNN
+F 1 "Yellow" H 6800 2800 50  0000 C CNN
+F 2 "0_local:LED_0603_1608Metric" H 6800 2350 50  0001 C CNN
+F 3 "~" H 6800 2600 50  0001 C CNN
+F 4 "0603" H 6800 2700 50  0000 C CNN "Form"
+	1    6800 2600
+	-1   0    0    -1
+$EndComp
+Wire Wire Line
+	6950 2600 7200 2600
+Wire Wire Line
+	5850 1100 5850 1600
+Connection ~ 5850 1600
+Wire Wire Line
+	5850 1600 5850 1850
+Connection ~ 5850 2100
+Wire Wire Line
+	5850 2100 5850 2600
+Wire Wire Line
+	7200 1850 7450 1850
+Wire Wire Line
+	7200 1100 7200 1600
+Connection ~ 7200 1600
+Wire Wire Line
+	7200 1600 7200 1850
+Connection ~ 7200 2100
+Wire Wire Line
+	7200 2100 7200 2600
+Connection ~ 7200 1850
+Wire Wire Line
+	7200 1850 7200 2100
+Connection ~ 5850 1850
+Wire Wire Line
+	5850 1850 5850 2100
+Text GLabel 8300 1850 0    50   Input ~ 0
+P3.1
+$Comp
+L 0_local:R_0603 R311
+U 1 1 5E8036C0
+P 8950 1100
+F 0 "R311" V 9250 1100 50  0000 C CNN
+F 1 "220 Ohms" V 9150 1100 50  0000 C CNN
+F 2 "0_local:R_0603_1608Metric" V 9080 1050 50  0001 C CNN
+F 3 "~" H 8900 1100 50  0001 C CNN
+F 4 "0603" V 9050 1100 50  0000 C CNN "Form"
+	1    8950 1100
+	0    -1   -1   0
+$EndComp
+Wire Wire Line
+	8550 1100 8800 1100
+Wire Wire Line
+	8300 1850 8550 1850
+Wire Wire Line
+	9100 1100 9350 1100
+$Comp
+L 0_local:LED_0603 D311
+U 1 1 5E8036CA
+P 9500 1100
+F 0 "D311" H 9500 1400 50  0000 C CNN
+F 1 "Red" H 9500 1300 50  0000 C CNN
+F 2 "0_local:LED_0603_1608Metric" H 9500 850 50  0001 C CNN
+F 3 "~" H 9500 1100 50  0001 C CNN
+F 4 "0603" H 9500 1200 50  0000 C CNN "Form"
+	1    9500 1100
+	-1   0    0    -1
+$EndComp
+Wire Wire Line
+	9650 1100 9900 1100
+Text GLabel 10150 1850 2    50   Input ~ 0
+GND
+$Comp
+L 0_local:R_0603 R312
+U 1 1 5E8036D3
+P 8950 1600
+F 0 "R312" V 9250 1600 50  0000 C CNN
+F 1 "220 Ohms" V 9150 1600 50  0000 C CNN
+F 2 "0_local:R_0603_1608Metric" V 9080 1550 50  0001 C CNN
+F 3 "~" H 8900 1600 50  0001 C CNN
+F 4 "0603" V 9050 1600 50  0000 C CNN "Form"
+	1    8950 1600
+	0    -1   -1   0
+$EndComp
+Wire Wire Line
+	8550 1600 8800 1600
+Wire Wire Line
+	9100 1600 9350 1600
+$Comp
+L 0_local:LED_0603 D312
+U 1 1 5E8036DC
+P 9500 1600
+F 0 "D312" H 9500 1900 50  0000 C CNN
+F 1 "Red" H 9500 1800 50  0000 C CNN
+F 2 "0_local:LED_0603_1608Metric" H 9500 1350 50  0001 C CNN
+F 3 "~" H 9500 1600 50  0001 C CNN
+F 4 "0603" H 9500 1700 50  0000 C CNN "Form"
+	1    9500 1600
+	-1   0    0    -1
+$EndComp
+Wire Wire Line
+	9650 1600 9900 1600
+$Comp
+L 0_local:R_0603 R313
+U 1 1 5E8036E4
+P 8950 2100
+F 0 "R313" V 9250 2100 50  0000 C CNN
+F 1 "220 Ohms" V 9150 2100 50  0000 C CNN
+F 2 "0_local:R_0603_1608Metric" V 9080 2050 50  0001 C CNN
+F 3 "~" H 8900 2100 50  0001 C CNN
+F 4 "0603" V 9050 2100 50  0000 C CNN "Form"
+	1    8950 2100
+	0    -1   -1   0
+$EndComp
+Wire Wire Line
+	8550 2100 8800 2100
+Wire Wire Line
+	9100 2100 9350 2100
+$Comp
+L 0_local:LED_0603 D313
+U 1 1 5E8036ED
+P 9500 2100
+F 0 "D313" H 9500 2400 50  0000 C CNN
+F 1 "Red" H 9500 2300 50  0000 C CNN
+F 2 "0_local:LED_0603_1608Metric" H 9500 1850 50  0001 C CNN
+F 3 "~" H 9500 2100 50  0001 C CNN
+F 4 "0603" H 9500 2200 50  0000 C CNN "Form"
+	1    9500 2100
+	-1   0    0    -1
+$EndComp
+Wire Wire Line
+	9650 2100 9900 2100
+$Comp
+L 0_local:R_0603 R314
+U 1 1 5E8036F5
+P 8950 2600
+F 0 "R314" V 9250 2600 50  0000 C CNN
+F 1 "220 Ohms" V 9150 2600 50  0000 C CNN
+F 2 "0_local:R_0603_1608Metric" V 9080 2550 50  0001 C CNN
+F 3 "~" H 8900 2600 50  0001 C CNN
+F 4 "0603" V 9050 2600 50  0000 C CNN "Form"
+	1    8950 2600
+	0    -1   -1   0
+$EndComp
+Wire Wire Line
+	8550 2600 8800 2600
+Wire Wire Line
+	9100 2600 9350 2600
+$Comp
+L 0_local:LED_0603 D314
+U 1 1 5E8036FE
+P 9500 2600
+F 0 "D314" H 9500 2900 50  0000 C CNN
+F 1 "Red" H 9500 2800 50  0000 C CNN
+F 2 "0_local:LED_0603_1608Metric" H 9500 2350 50  0001 C CNN
+F 3 "~" H 9500 2600 50  0001 C CNN
+F 4 "0603" H 9500 2700 50  0000 C CNN "Form"
+	1    9500 2600
+	-1   0    0    -1
+$EndComp
+Wire Wire Line
+	9650 2600 9900 2600
+Wire Wire Line
+	8550 1100 8550 1600
+Connection ~ 8550 1600
+Wire Wire Line
+	8550 1600 8550 1850
+Connection ~ 8550 2100
+Wire Wire Line
+	8550 2100 8550 2600
+Wire Wire Line
+	9900 1850 10150 1850
+Wire Wire Line
+	9900 1100 9900 1600
+Connection ~ 9900 1600
+Wire Wire Line
+	9900 1600 9900 1850
+Connection ~ 9900 2100
+Wire Wire Line
+	9900 2100 9900 2600
+Connection ~ 9900 1850
+Wire Wire Line
+	9900 1850 9900 2100
+Connection ~ 8550 1850
+Wire Wire Line
+	8550 1850 8550 2100
+Text GLabel 5600 4150 0    50   Input ~ 0
+P1.5
+$Comp
+L 0_local:R_0603 R151
+U 1 1 5E807866
+P 6250 3400
+F 0 "R151" V 6550 3400 50  0000 C CNN
+F 1 "220 Ohms" V 6450 3400 50  0000 C CNN
+F 2 "0_local:R_0603_1608Metric" V 6380 3350 50  0001 C CNN
+F 3 "~" H 6200 3400 50  0001 C CNN
+F 4 "0603" V 6350 3400 50  0000 C CNN "Form"
+	1    6250 3400
+	0    -1   -1   0
+$EndComp
+Wire Wire Line
+	5850 3400 6100 3400
+Wire Wire Line
+	5600 4150 5850 4150
+Wire Wire Line
+	6400 3400 6650 3400
+$Comp
+L 0_local:LED_0603 D151
+U 1 1 5E807870
+P 6800 3400
+F 0 "D151" H 6800 3700 50  0000 C CNN
+F 1 "Yellow" H 6800 3600 50  0000 C CNN
+F 2 "0_local:LED_0603_1608Metric" H 6800 3150 50  0001 C CNN
+F 3 "~" H 6800 3400 50  0001 C CNN
+F 4 "0603" H 6800 3500 50  0000 C CNN "Form"
+	1    6800 3400
+	-1   0    0    -1
+$EndComp
+Wire Wire Line
+	6950 3400 7200 3400
+Text GLabel 7450 4150 2    50   Input ~ 0
+GND
+$Comp
+L 0_local:R_0603 R152
+U 1 1 5E807879
+P 6250 3900
+F 0 "R152" V 6550 3900 50  0000 C CNN
+F 1 "220 Ohms" V 6450 3900 50  0000 C CNN
+F 2 "0_local:R_0603_1608Metric" V 6380 3850 50  0001 C CNN
+F 3 "~" H 6200 3900 50  0001 C CNN
+F 4 "0603" V 6350 3900 50  0000 C CNN "Form"
+	1    6250 3900
+	0    -1   -1   0
+$EndComp
+Wire Wire Line
+	5850 3900 6100 3900
+Wire Wire Line
+	6400 3900 6650 3900
+$Comp
+L 0_local:LED_0603 D152
+U 1 1 5E807882
+P 6800 3900
+F 0 "D152" H 6800 4200 50  0000 C CNN
+F 1 "Yellow" H 6800 4100 50  0000 C CNN
+F 2 "0_local:LED_0603_1608Metric" H 6800 3650 50  0001 C CNN
+F 3 "~" H 6800 3900 50  0001 C CNN
+F 4 "0603" H 6800 4000 50  0000 C CNN "Form"
+	1    6800 3900
+	-1   0    0    -1
+$EndComp
+Wire Wire Line
+	6950 3900 7200 3900
+$Comp
+L 0_local:R_0603 R153
+U 1 1 5E80788A
+P 6250 4400
+F 0 "R153" V 6550 4400 50  0000 C CNN
+F 1 "220 Ohms" V 6450 4400 50  0000 C CNN
+F 2 "0_local:R_0603_1608Metric" V 6380 4350 50  0001 C CNN
+F 3 "~" H 6200 4400 50  0001 C CNN
+F 4 "0603" V 6350 4400 50  0000 C CNN "Form"
+	1    6250 4400
+	0    -1   -1   0
+$EndComp
+Wire Wire Line
+	5850 4400 6100 4400
+Wire Wire Line
+	6400 4400 6650 4400
+$Comp
+L 0_local:LED_0603 D153
+U 1 1 5E807893
+P 6800 4400
+F 0 "D153" H 6800 4700 50  0000 C CNN
+F 1 "Yellow" H 6800 4600 50  0000 C CNN
+F 2 "0_local:LED_0603_1608Metric" H 6800 4150 50  0001 C CNN
+F 3 "~" H 6800 4400 50  0001 C CNN
+F 4 "0603" H 6800 4500 50  0000 C CNN "Form"
+	1    6800 4400
+	-1   0    0    -1
+$EndComp
+Wire Wire Line
+	6950 4400 7200 4400
+$Comp
+L 0_local:R_0603 R154
+U 1 1 5E80789B
+P 6250 4900
+F 0 "R154" V 6550 4900 50  0000 C CNN
+F 1 "220 Ohms" V 6450 4900 50  0000 C CNN
+F 2 "0_local:R_0603_1608Metric" V 6380 4850 50  0001 C CNN
+F 3 "~" H 6200 4900 50  0001 C CNN
+F 4 "0603" V 6350 4900 50  0000 C CNN "Form"
+	1    6250 4900
+	0    -1   -1   0
+$EndComp
+Wire Wire Line
+	5850 4900 6100 4900
+Wire Wire Line
+	6400 4900 6650 4900
+$Comp
+L 0_local:LED_0603 D154
+U 1 1 5E8078A4
+P 6800 4900
+F 0 "D154" H 6800 5200 50  0000 C CNN
+F 1 "Yellow" H 6800 5100 50  0000 C CNN
+F 2 "0_local:LED_0603_1608Metric" H 6800 4650 50  0001 C CNN
+F 3 "~" H 6800 4900 50  0001 C CNN
+F 4 "0603" H 6800 5000 50  0000 C CNN "Form"
+	1    6800 4900
+	-1   0    0    -1
+$EndComp
+Wire Wire Line
+	6950 4900 7200 4900
+Wire Wire Line
+	5850 3400 5850 3900
+Connection ~ 5850 3900
+Wire Wire Line
+	5850 3900 5850 4150
+Connection ~ 5850 4400
+Wire Wire Line
+	5850 4400 5850 4900
+Wire Wire Line
+	7200 4150 7450 4150
+Wire Wire Line
+	7200 3400 7200 3900
+Connection ~ 7200 3900
+Wire Wire Line
+	7200 3900 7200 4150
+Connection ~ 7200 4400
+Wire Wire Line
+	7200 4400 7200 4900
+Connection ~ 7200 4150
+Wire Wire Line
+	7200 4150 7200 4400
+Connection ~ 5850 4150
+Wire Wire Line
+	5850 4150 5850 4400
+Text GLabel 1050 7250 0    50   Input ~ 0
+P1.4
+Text GLabel 8650 5850 0    50   Input ~ 0
+P1.1
+$Comp
+L 0_local:SW_SPDT_C136659 SW1
+U 1 1 5E69513D
+P 3400 2950
+F 0 "SW1" H 3400 3235 50  0000 C CNN
+F 1 "SPDT_C136659" H 3400 3144 50  0000 C CNN
+F 2 "0_local:SW_SPDT_PCM12_C136659" H 3400 2650 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/Korean-Hroparts-Elec-K3-1296S-E2_C136659.pdf" H 3400 2950 50  0001 C CNN
+	1    3400 2950
+	1    0    0    -1
+$EndComp
+$Comp
+L 0_local:SW_TS2306A SW2
+U 1 1 5E686746
+P 2050 4100
+F 0 "SW2" V 2396 4050 50  0000 R CNN
+F 1 "TS2306A" V 2305 4050 50  0000 R CNN
+F 2 "0_local:SW_TS2306A240GFMSM9_C388290" H 2350 3900 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/1904241742_SHOU-HAN-TS2306A-240gf-MSM-9_C388290.pdf" H 2350 3800 50  0001 C CNN
+F 4 "Tactile Switches SPST 3.00mm x 2.00mm 0.60mm 10mA @ 5VDC SMD RoHS" H 2350 3700 50  0001 C CNN "Description"
+F 5 "1" H 2350 3600 50  0001 C CNN "Height"
+F 6 "Shou Han" H 2350 3500 50  0001 C CNN "Manufacturer_Name"
+F 7 "TS2306A-240GF-MSM-9_C388290" H 2350 3400 50  0001 C CNN "Manufacturer_Part_Number"
+	1    2050 4100
+	0    -1   -1   0
+$EndComp
+$Comp
+L 0_local:SW_TS2306A S11
+U 1 1 5E828178
+P 8900 5850
+F 0 "S11" H 9200 6115 50  0000 C CNN
+F 1 "SW_TS2306A" H 9200 6024 50  0000 C CNN
+F 2 "0_local:SW_TS2306A240GFMSM9_C388290" H 9200 5650 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/1904241742_SHOU-HAN-TS2306A-240gf-MSM-9_C388290.pdf" H 9200 5550 50  0001 C CNN
+F 4 "Tactile Switches SPST 3.00mm x 2.00mm 0.60mm 10mA @ 5VDC SMD RoHS" H 9200 5450 50  0001 C CNN "Description"
+F 5 "1" H 9200 5350 50  0001 C CNN "Height"
+F 6 "Shou Han" H 9200 5250 50  0001 C CNN "Manufacturer_Name"
+F 7 "TS2306A-240GF-MSM-9_C388290" H 9200 5150 50  0001 C CNN "Manufacturer_Part_Number"
+	1    8900 5850
+	1    0    0    -1
+$EndComp
+Wire Wire Line
+	1050 7250 1300 7250
+Wire Wire Line
+	8650 5850 8900 5850
+Wire Wire Line
+	9500 5850 9750 5850
+Text GLabel 9750 5850 2    50   Input ~ 0
+GND
+$Comp
+L 0_local:R_0603 R141
+U 1 1 5E85404A
+P 1700 7000
+F 0 "R141" V 2000 7000 50  0000 C CNN
+F 1 "220 Ohms" V 1900 7000 50  0000 C CNN
+F 2 "0_local:R_0603_1608Metric" V 1830 6950 50  0001 C CNN
+F 3 "~" H 1650 7000 50  0001 C CNN
+F 4 "0603" V 1800 7000 50  0000 C CNN "Form"
+	1    1700 7000
+	0    -1   -1   0
+$EndComp
+Wire Wire Line
+	1300 7000 1550 7000
+Wire Wire Line
+	1850 7000 2100 7000
+$Comp
+L 0_local:LED_0603 D141
+U 1 1 5E854053
+P 2250 7000
+F 0 "D141" H 2250 7300 50  0000 C CNN
+F 1 "Blue" H 2250 7200 50  0000 C CNN
+F 2 "0_local:LED_0603_1608Metric" H 2250 6750 50  0001 C CNN
+F 3 "~" H 2250 7000 50  0001 C CNN
+F 4 "0603" H 2250 7100 50  0000 C CNN "Form"
+	1    2250 7000
+	-1   0    0    -1
+$EndComp
+Wire Wire Line
+	2400 7000 2650 7000
+$Comp
+L 0_local:R_0603 R142
+U 1 1 5E85883C
+P 1700 7500
+F 0 "R142" V 2000 7500 50  0000 C CNN
+F 1 "220 Ohms" V 1900 7500 50  0000 C CNN
+F 2 "0_local:R_0603_1608Metric" V 1830 7450 50  0001 C CNN
+F 3 "~" H 1650 7500 50  0001 C CNN
+F 4 "0603" V 1800 7500 50  0000 C CNN "Form"
+	1    1700 7500
+	0    -1   -1   0
+$EndComp
+Wire Wire Line
+	1300 7500 1550 7500
+Wire Wire Line
+	1850 7500 2100 7500
+$Comp
+L 0_local:LED_0603 D142
+U 1 1 5E858845
+P 2250 7500
+F 0 "D142" H 2250 7800 50  0000 C CNN
+F 1 "Blue" H 2250 7700 50  0000 C CNN
+F 2 "0_local:LED_0603_1608Metric" H 2250 7250 50  0001 C CNN
+F 3 "~" H 2250 7500 50  0001 C CNN
+F 4 "0603" H 2250 7600 50  0000 C CNN "Form"
+	1    2250 7500
+	-1   0    0    -1
+$EndComp
+Wire Wire Line
+	2400 7500 2650 7500
+Wire Wire Line
+	2650 7250 2900 7250
+Text GLabel 2900 7250 2    50   Input ~ 0
+GND
+Wire Wire Line
+	1300 7000 1300 7250
+Connection ~ 1300 7250
+Wire Wire Line
+	1300 7250 1300 7500
+Wire Wire Line
+	2650 7000 2650 7250
+Connection ~ 2650 7250
+Wire Wire Line
+	2650 7250 2650 7500
+Text GLabel 3750 6000 0    50   Input ~ 0
+P1.6
+Wire Wire Line
+	3750 6000 4000 6000
+$Comp
+L 0_local:R_0603 R161
+U 1 1 5E880770
+P 4400 5750
+F 0 "R161" V 4700 5750 50  0000 C CNN
+F 1 "220 Ohms" V 4600 5750 50  0000 C CNN
+F 2 "0_local:R_0603_1608Metric" V 4530 5700 50  0001 C CNN
+F 3 "~" H 4350 5750 50  0001 C CNN
+F 4 "0603" V 4500 5750 50  0000 C CNN "Form"
+	1    4400 5750
+	0    -1   -1   0
+$EndComp
+Wire Wire Line
+	4000 5750 4250 5750
+Wire Wire Line
+	4550 5750 4800 5750
+$Comp
+L 0_local:LED_0603 D161
+U 1 1 5E880779
+P 4950 5750
+F 0 "D161" H 4950 6050 50  0000 C CNN
+F 1 "Blue" H 4950 5950 50  0000 C CNN
+F 2 "0_local:LED_0603_1608Metric" H 4950 5500 50  0001 C CNN
+F 3 "~" H 4950 5750 50  0001 C CNN
+F 4 "0603" H 4950 5850 50  0000 C CNN "Form"
+	1    4950 5750
+	-1   0    0    -1
+$EndComp
+Wire Wire Line
+	5100 5750 5350 5750
+$Comp
+L 0_local:R_0603 R162
+U 1 1 5E880781
+P 4400 6250
+F 0 "R162" V 4700 6250 50  0000 C CNN
+F 1 "220 Ohms" V 4600 6250 50  0000 C CNN
+F 2 "0_local:R_0603_1608Metric" V 4530 6200 50  0001 C CNN
+F 3 "~" H 4350 6250 50  0001 C CNN
+F 4 "0603" V 4500 6250 50  0000 C CNN "Form"
+	1    4400 6250
+	0    -1   -1   0
+$EndComp
+Wire Wire Line
+	4000 6250 4250 6250
+Wire Wire Line
+	4550 6250 4800 6250
+$Comp
+L 0_local:LED_0603 D162
+U 1 1 5E88078A
+P 4950 6250
+F 0 "D162" H 4950 6550 50  0000 C CNN
+F 1 "Blue" H 4950 6450 50  0000 C CNN
+F 2 "0_local:LED_0603_1608Metric" H 4950 6000 50  0001 C CNN
+F 3 "~" H 4950 6250 50  0001 C CNN
+F 4 "0603" H 4950 6350 50  0000 C CNN "Form"
+	1    4950 6250
+	-1   0    0    -1
+$EndComp
+Wire Wire Line
+	5100 6250 5350 6250
+Wire Wire Line
+	5350 6000 5600 6000
+Text GLabel 5600 6000 2    50   Input ~ 0
+GND
+Wire Wire Line
+	4000 5750 4000 6000
+Connection ~ 4000 6000
+Wire Wire Line
+	4000 6000 4000 6250
+Wire Wire Line
+	5350 5750 5350 6000
+Connection ~ 5350 6000
+Wire Wire Line
+	5350 6000 5350 6250
+Text GLabel 3750 7250 0    50   Input ~ 0
+P1.7
+Wire Wire Line
+	3750 7250 4000 7250
+$Comp
+L 0_local:R_0603 R171
+U 1 1 5E88716C
+P 4400 7000
+F 0 "R171" V 4700 7000 50  0000 C CNN
+F 1 "220 Ohms" V 4600 7000 50  0000 C CNN
+F 2 "0_local:R_0603_1608Metric" V 4530 6950 50  0001 C CNN
+F 3 "~" H 4350 7000 50  0001 C CNN
+F 4 "0603" V 4500 7000 50  0000 C CNN "Form"
+	1    4400 7000
+	0    -1   -1   0
+$EndComp
+Wire Wire Line
+	4000 7000 4250 7000
+Wire Wire Line
+	4550 7000 4800 7000
+$Comp
+L 0_local:LED_0603 D171
+U 1 1 5E887175
+P 4950 7000
+F 0 "D171" H 4950 7300 50  0000 C CNN
+F 1 "Blue" H 4950 7200 50  0000 C CNN
+F 2 "0_local:LED_0603_1608Metric" H 4950 6750 50  0001 C CNN
+F 3 "~" H 4950 7000 50  0001 C CNN
+F 4 "0603" H 4950 7100 50  0000 C CNN "Form"
+	1    4950 7000
+	-1   0    0    -1
+$EndComp
+Wire Wire Line
+	5100 7000 5350 7000
+$Comp
+L 0_local:R_0603 R172
+U 1 1 5E88717D
+P 4400 7500
+F 0 "R172" V 4700 7500 50  0000 C CNN
+F 1 "220 Ohms" V 4600 7500 50  0000 C CNN
+F 2 "0_local:R_0603_1608Metric" V 4530 7450 50  0001 C CNN
+F 3 "~" H 4350 7500 50  0001 C CNN
+F 4 "0603" V 4500 7500 50  0000 C CNN "Form"
+	1    4400 7500
+	0    -1   -1   0
+$EndComp
+Wire Wire Line
+	4000 7500 4250 7500
+Wire Wire Line
+	4550 7500 4800 7500
+$Comp
+L 0_local:LED_0603 D172
+U 1 1 5E887186
+P 4950 7500
+F 0 "D172" H 4950 7800 50  0000 C CNN
+F 1 "Blue" H 4950 7700 50  0000 C CNN
+F 2 "0_local:LED_0603_1608Metric" H 4950 7250 50  0001 C CNN
+F 3 "~" H 4950 7500 50  0001 C CNN
+F 4 "0603" H 4950 7600 50  0000 C CNN "Form"
+	1    4950 7500
+	-1   0    0    -1
+$EndComp
+Wire Wire Line
+	5100 7500 5350 7500
+Wire Wire Line
+	5350 7250 5600 7250
+Text GLabel 5600 7250 2    50   Input ~ 0
+GND
+Wire Wire Line
+	4000 7000 4000 7250
+Connection ~ 4000 7250
+Wire Wire Line
+	4000 7250 4000 7500
+Wire Wire Line
+	5350 7000 5350 7250
+Connection ~ 5350 7250
+Wire Wire Line
+	5350 7250 5350 7500
+Text GLabel 1050 6000 0    50   Input ~ 0
+P3.2
+Wire Wire Line
+	1050 6000 1300 6000
+$Comp
+L 0_local:R_0603 R321
+U 1 1 5E8FCE25
+P 1700 5750
+F 0 "R321" V 2000 5750 50  0000 C CNN
+F 1 "220 Ohms" V 1900 5750 50  0000 C CNN
+F 2 "0_local:R_0603_1608Metric" V 1830 5700 50  0001 C CNN
+F 3 "~" H 1650 5750 50  0001 C CNN
+F 4 "0603" V 1800 5750 50  0000 C CNN "Form"
+	1    1700 5750
+	0    -1   -1   0
+$EndComp
+Wire Wire Line
+	1300 5750 1550 5750
+Wire Wire Line
+	1850 5750 2100 5750
+$Comp
+L 0_local:LED_0603 D321
+U 1 1 5E8FCE2E
+P 2250 5750
+F 0 "D321" H 2250 6050 50  0000 C CNN
+F 1 "Blue" H 2250 5950 50  0000 C CNN
+F 2 "0_local:LED_0603_1608Metric" H 2250 5500 50  0001 C CNN
+F 3 "~" H 2250 5750 50  0001 C CNN
+F 4 "0603" H 2250 5850 50  0000 C CNN "Form"
+	1    2250 5750
+	-1   0    0    -1
+$EndComp
+Wire Wire Line
+	2400 5750 2650 5750
+$Comp
+L 0_local:R_0603 R322
+U 1 1 5E8FCE36
+P 1700 6250
+F 0 "R322" V 2000 6250 50  0000 C CNN
+F 1 "220 Ohms" V 1900 6250 50  0000 C CNN
+F 2 "0_local:R_0603_1608Metric" V 1830 6200 50  0001 C CNN
+F 3 "~" H 1650 6250 50  0001 C CNN
+F 4 "0603" V 1800 6250 50  0000 C CNN "Form"
+	1    1700 6250
+	0    -1   -1   0
+$EndComp
+Wire Wire Line
+	1300 6250 1550 6250
+Wire Wire Line
+	1850 6250 2100 6250
+$Comp
+L 0_local:LED_0603 D322
+U 1 1 5E8FCE3F
+P 2250 6250
+F 0 "D322" H 2250 6550 50  0000 C CNN
+F 1 "Blue" H 2250 6450 50  0000 C CNN
+F 2 "0_local:LED_0603_1608Metric" H 2250 6000 50  0001 C CNN
+F 3 "~" H 2250 6250 50  0001 C CNN
+F 4 "0603" H 2250 6350 50  0000 C CNN "Form"
+	1    2250 6250
+	-1   0    0    -1
+$EndComp
+Wire Wire Line
+	2400 6250 2650 6250
+Wire Wire Line
+	2650 6000 2900 6000
+Text GLabel 2900 6000 2    50   Input ~ 0
+GND
+Wire Wire Line
+	1300 5750 1300 6000
+Connection ~ 1300 6000
+Wire Wire Line
+	1300 6000 1300 6250
+Wire Wire Line
+	2650 5750 2650 6000
+Connection ~ 2650 6000
+Wire Wire Line
+	2650 6000 2650 6250
+Text GLabel 8300 4850 0    50   Input ~ 0
+P3.3
+Wire Wire Line
+	8300 4850 8550 4850
+$Comp
+L 0_local:R_0603 R331
+U 1 1 5E95688F
+P 8950 4600
+F 0 "R331" V 9250 4600 50  0000 C CNN
+F 1 "220 Ohms" V 9150 4600 50  0000 C CNN
+F 2 "0_local:R_0603_1608Metric" V 9080 4550 50  0001 C CNN
+F 3 "~" H 8900 4600 50  0001 C CNN
+F 4 "0603" V 9050 4600 50  0000 C CNN "Form"
+	1    8950 4600
+	0    -1   -1   0
+$EndComp
+Wire Wire Line
+	8550 4600 8800 4600
+Wire Wire Line
+	9100 4600 9350 4600
+$Comp
+L 0_local:LED_0603 D331
+U 1 1 5E956898
+P 9500 4600
+F 0 "D331" H 9500 4900 50  0000 C CNN
+F 1 "Red" H 9500 4800 50  0000 C CNN
+F 2 "0_local:LED_0603_1608Metric" H 9500 4350 50  0001 C CNN
+F 3 "~" H 9500 4600 50  0001 C CNN
+F 4 "0603" H 9500 4700 50  0000 C CNN "Form"
+	1    9500 4600
+	-1   0    0    -1
+$EndComp
+Wire Wire Line
+	9650 4600 9900 4600
+$Comp
+L 0_local:R_0603 R332
+U 1 1 5E9568A0
+P 8950 5100
+F 0 "R332" V 9250 5100 50  0000 C CNN
+F 1 "220 Ohms" V 9150 5100 50  0000 C CNN
+F 2 "0_local:R_0603_1608Metric" V 9080 5050 50  0001 C CNN
+F 3 "~" H 8900 5100 50  0001 C CNN
+F 4 "0603" V 9050 5100 50  0000 C CNN "Form"
+	1    8950 5100
+	0    -1   -1   0
+$EndComp
+Wire Wire Line
+	8550 5100 8800 5100
+Wire Wire Line
+	9100 5100 9350 5100
+$Comp
+L 0_local:LED_0603 D332
+U 1 1 5E9568A9
+P 9500 5100
+F 0 "D332" H 9500 5400 50  0000 C CNN
+F 1 "Red" H 9500 5300 50  0000 C CNN
+F 2 "0_local:LED_0603_1608Metric" H 9500 4850 50  0001 C CNN
+F 3 "~" H 9500 5100 50  0001 C CNN
+F 4 "0603" H 9500 5200 50  0000 C CNN "Form"
+	1    9500 5100
+	-1   0    0    -1
+$EndComp
+Wire Wire Line
+	9650 5100 9900 5100
+Wire Wire Line
+	9900 4850 10150 4850
+Text GLabel 10150 4850 2    50   Input ~ 0
+GND
+Wire Wire Line
+	8550 4600 8550 4850
+Connection ~ 8550 4850
+Wire Wire Line
+	8550 4850 8550 5100
+Wire Wire Line
+	9900 4600 9900 4850
+Connection ~ 9900 4850
+Wire Wire Line
+	9900 4850 9900 5100
+Text Notes 5400 2000 0    50   ~ 0
+PWM
+Text Notes 8100 2000 0    50   ~ 0
+PWM
+Text Notes 5400 4300 0    50   ~ 0
+PWM
+Text GLabel 8300 3600 0    50   Input ~ 0
+P3.4
+Wire Wire Line
+	8300 3600 8550 3600
+$Comp
+L 0_local:R_0603 R341
+U 1 1 5E971C6B
+P 8950 3350
+F 0 "R341" V 9250 3350 50  0000 C CNN
+F 1 "220 Ohms" V 9150 3350 50  0000 C CNN
+F 2 "0_local:R_0603_1608Metric" V 9080 3300 50  0001 C CNN
+F 3 "~" H 8900 3350 50  0001 C CNN
+F 4 "0603" V 9050 3350 50  0000 C CNN "Form"
+	1    8950 3350
+	0    -1   -1   0
+$EndComp
+Wire Wire Line
+	8550 3350 8800 3350
+Wire Wire Line
+	9100 3350 9350 3350
+$Comp
+L 0_local:LED_0603 D341
+U 1 1 5E971C74
+P 9500 3350
+F 0 "D341" H 9500 3650 50  0000 C CNN
+F 1 "Red" H 9500 3550 50  0000 C CNN
+F 2 "0_local:LED_0603_1608Metric" H 9500 3100 50  0001 C CNN
+F 3 "~" H 9500 3350 50  0001 C CNN
+F 4 "0603" H 9500 3450 50  0000 C CNN "Form"
+	1    9500 3350
+	-1   0    0    -1
+$EndComp
+Wire Wire Line
+	9650 3350 9900 3350
+$Comp
+L 0_local:R_0603 R342
+U 1 1 5E971C7C
+P 8950 3850
+F 0 "R342" V 9250 3850 50  0000 C CNN
+F 1 "220 Ohms" V 9150 3850 50  0000 C CNN
+F 2 "0_local:R_0603_1608Metric" V 9080 3800 50  0001 C CNN
+F 3 "~" H 8900 3850 50  0001 C CNN
+F 4 "0603" V 9050 3850 50  0000 C CNN "Form"
+	1    8950 3850
+	0    -1   -1   0
+$EndComp
+Wire Wire Line
+	8550 3850 8800 3850
+Wire Wire Line
+	9100 3850 9350 3850
+$Comp
+L 0_local:LED_0603 D342
+U 1 1 5E971C85
+P 9500 3850
+F 0 "D342" H 9500 4150 50  0000 C CNN
+F 1 "Red" H 9500 4050 50  0000 C CNN
+F 2 "0_local:LED_0603_1608Metric" H 9500 3600 50  0001 C CNN
+F 3 "~" H 9500 3850 50  0001 C CNN
+F 4 "0603" H 9500 3950 50  0000 C CNN "Form"
+	1    9500 3850
+	-1   0    0    -1
+$EndComp
+Wire Wire Line
+	9650 3850 9900 3850
+Wire Wire Line
+	9900 3600 10150 3600
+Text GLabel 10150 3600 2    50   Input ~ 0
+GND
+Wire Wire Line
+	8550 3350 8550 3600
+Connection ~ 8550 3600
+Wire Wire Line
+	8550 3600 8550 3850
+Wire Wire Line
+	9900 3350 9900 3600
+Connection ~ 9900 3600
+Wire Wire Line
+	9900 3600 9900 3850
+Text Notes 8100 3750 0    50   ~ 0
+PWM
+Text Notes 8550 6300 0    50   ~ 0
+SW11 will be used by code on the IC\nto allow for different subroutines to\nbe activated via tactile switch
 $EndSCHEMATC
