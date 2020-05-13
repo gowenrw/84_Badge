@@ -91,62 +91,14 @@ void main() {
         // ********************************
         if (ledmode == 3) {
           // *****
-          // ***** This mode blinks LEDs by pin
+          // ***** This mode keeps all LEDs ON
           // *****
           // Delay to display previous LED state
-          mDelaymS(150);
+          mDelaymS(300);
           // If we see button push set button push flag
           if (BUTTON11 == 0) { button11push = 1; }
           // ***** Set LED states to on or off
-          LEDY30 = 1, LEDY15 = 0, LEDR31 = 0, LEDR33 = 0, LEDR34 = 0, LEDB32 = 0, LEDB14 = 0, LEDB16 = 0, LEDB17 = 0;
-          // Delay to display previous LED state
-          mDelaymS(150);
-          // If we see button push set button push flag
-          if (BUTTON11 == 0) { button11push = 1; }
-          // ***** Set LED states to on or off
-          LEDY30 = 0, LEDY15 = 1, LEDR31 = 0, LEDR33 = 0, LEDR34 = 0, LEDB32 = 0, LEDB14 = 0, LEDB16 = 0, LEDB17 = 0;
-          // Delay to display previous LED state
-          mDelaymS(150);
-          // If we see button push set button push flag
-          if (BUTTON11 == 0) { button11push = 1; }
-          // ***** Set LED states to on or off
-          LEDY30 = 0, LEDY15 = 0, LEDR31 = 1, LEDR33 = 0, LEDR34 = 0, LEDB32 = 0, LEDB14 = 0, LEDB16 = 0, LEDB17 = 0;
-          // Delay to display previous LED state
-          mDelaymS(150);
-          // If we see button push set button push flag
-          if (BUTTON11 == 0) { button11push = 1; }
-          // ***** Set LED states to on or off
-          LEDY30 = 0, LEDY15 = 0, LEDR31 = 0, LEDR33 = 1, LEDR34 = 0, LEDB32 = 0, LEDB14 = 0, LEDB16 = 0, LEDB17 = 0;
-          // Delay to display previous LED state
-          mDelaymS(150);
-          // If we see button push set button push flag
-          if (BUTTON11 == 0) { button11push = 1; }
-          // ***** Set LED states to on or off
-          LEDY30 = 0, LEDY15 = 0, LEDR31 = 0, LEDR33 = 0, LEDR34 = 1, LEDB32 = 0, LEDB14 = 0, LEDB16 = 0, LEDB17 = 0;
-          // Delay to display previous LED state
-          mDelaymS(150);
-          // If we see button push set button push flag
-          if (BUTTON11 == 0) { button11push = 1; }
-          // ***** Set LED states to on or off
-          LEDY30 = 0, LEDY15 = 0, LEDR31 = 0, LEDR33 = 0, LEDR34 = 0, LEDB32 = 1, LEDB14 = 0, LEDB16 = 0, LEDB17 = 0;
-          // Delay to display previous LED state
-          mDelaymS(150);
-          // If we see button push set button push flag
-          if (BUTTON11 == 0) { button11push = 1; }
-          // ***** Set LED states to on or off
-          LEDY30 = 0, LEDY15 = 0, LEDR31 = 0, LEDR33 = 0, LEDR34 = 0, LEDB32 = 0, LEDB14 = 1, LEDB16 = 0, LEDB17 = 0;
-          // Delay to display previous LED state
-          mDelaymS(150);
-          // If we see button push set button push flag
-          if (BUTTON11 == 0) { button11push = 1; }
-          // ***** Set LED states to on or off
-          LEDY30 = 0, LEDY15 = 0, LEDR31 = 0, LEDR33 = 0, LEDR34 = 0, LEDB32 = 0, LEDB14 = 0, LEDB16 = 1, LEDB17 = 0;
-          // Delay to display previous LED state
-          mDelaymS(150);
-          // If we see button push set button push flag
-          if (BUTTON11 == 0) { button11push = 1; }
-          // ***** Set LED states to on or off
-          LEDY30 = 0, LEDY15 = 0, LEDR31 = 0, LEDR33 = 0, LEDR34 = 0, LEDB32 = 0, LEDB14 = 0, LEDB16 = 0, LEDB17 = 1;
+          LEDY30 = 1, LEDY15 = 1, LEDR31 = 1, LEDR33 = 1, LEDR34 = 1, LEDB32 = 1, LEDB14 = 1, LEDB16 = 1, LEDB17 = 1;
           // ***** End of this LED mode
         }
         // ********************************
@@ -191,7 +143,25 @@ void main() {
           // If we see button push set button push flag
           if (BUTTON11 == 0) { button11push = 1; }
           // ***** Set LED states to on or off
-          LEDY15 = 1, LEDY30 = 0, LEDR33 = 1, LEDR34 = 0, LEDR31 = 0, LEDB32 = 0, LEDB14 = 0, LEDB16 = 0, LEDB17 = 0;
+          LEDY15 = 1, LEDY30 = 1, LEDR33 = 1, LEDR34 = 0, LEDR31 = 0, LEDB32 = 0, LEDB14 = 0, LEDB16 = 0, LEDB17 = 0;
+          // Delay to display previous LED state
+          mDelaymS(100);
+          // If we see button push set button push flag
+          if (BUTTON11 == 0) { button11push = 1; }
+          // ***** Set LED states to on or off
+          LEDY15 = 1, LEDY30 = 1, LEDR33 = 1, LEDR34 = 0, LEDR31 = 0, LEDB32 = 0, LEDB14 = 0, LEDB16 = 0, LEDB17 = 0;
+          // Delay to display previous LED state
+          mDelaymS(100);
+          // If we see button push set button push flag
+          if (BUTTON11 == 0) { button11push = 1; }
+          // ***** Set LED states to on or off
+          LEDY15 = 1, LEDY30 = 1, LEDR33 = 1, LEDR34 = 0, LEDR31 = 0, LEDB32 = 0, LEDB14 = 0, LEDB16 = 0, LEDB17 = 0;
+          // Delay to display previous LED state
+          mDelaymS(100);
+          // If we see button push set button push flag
+          if (BUTTON11 == 0) { button11push = 1; }
+          // ***** Set LED states to on or off
+          LEDY15 = 1, LEDY30 = 1, LEDR33 = 1, LEDR34 = 0, LEDR31 = 0, LEDB32 = 0, LEDB14 = 0, LEDB16 = 0, LEDB17 = 0;
           // Delay to display previous LED state
           mDelaymS(100);
           // If we see button push set button push flag
@@ -209,13 +179,37 @@ void main() {
           // If we see button push set button push flag
           if (BUTTON11 == 0) { button11push = 1; }
           // ***** Set LED states to on or off
+          LEDY15 = 1, LEDY30 = 1, LEDR33 = 1, LEDR34 = 0, LEDR31 = 0, LEDB32 = 0, LEDB14 = 0, LEDB16 = 0, LEDB17 = 0;
+          // Delay to display previous LED state
+          mDelaymS(100);
+          // If we see button push set button push flag
+          if (BUTTON11 == 0) { button11push = 1; }
+          // ***** Set LED states to on or off
+          LEDY15 = 1, LEDY30 = 1, LEDR33 = 1, LEDR34 = 0, LEDR31 = 0, LEDB32 = 0, LEDB14 = 0, LEDB16 = 0, LEDB17 = 0;
+          // Delay to display previous LED state
+          mDelaymS(100);
+          // If we see button push set button push flag
+          if (BUTTON11 == 0) { button11push = 1; }
+          // ***** Set LED states to on or off
+          LEDY15 = 1, LEDY30 = 1, LEDR33 = 1, LEDR34 = 0, LEDR31 = 0, LEDB32 = 0, LEDB14 = 0, LEDB16 = 0, LEDB17 = 0;
+          // Delay to display previous LED state
+          mDelaymS(100);
+          // If we see button push set button push flag
+          if (BUTTON11 == 0) { button11push = 1; }
+          // ***** Set LED states to on or off
+          LEDY15 = 1, LEDY30 = 1, LEDR33 = 1, LEDR34 = 0, LEDR31 = 0, LEDB32 = 0, LEDB14 = 0, LEDB16 = 0, LEDB17 = 0;
+          // Delay to display previous LED state
+          mDelaymS(100);
+          // If we see button push set button push flag
+          if (BUTTON11 == 0) { button11push = 1; }
+          // ***** Set LED states to on or off
           LEDY15 = 1, LEDY30 = 1, LEDR33 = 1, LEDR34 = 0, LEDR31 = 0, LEDB32 = 1, LEDB14 = 0, LEDB16 = 0, LEDB17 = 0;
           // Delay to display previous LED state
           mDelaymS(100);
           // If we see button push set button push flag
           if (BUTTON11 == 0) { button11push = 1; }
           // ***** Set LED states to on or off
-          LEDY15 = 1, LEDY30 = 0, LEDR33 = 1, LEDR34 = 0, LEDR31 = 0, LEDB32 = 1, LEDB14 = 1, LEDB16 = 0, LEDB17 = 0;
+          LEDY15 = 1, LEDY30 = 1, LEDR33 = 1, LEDR34 = 0, LEDR31 = 0, LEDB32 = 1, LEDB14 = 1, LEDB16 = 0, LEDB17 = 0;
           // Delay to display previous LED state
           mDelaymS(100);
           // If we see button push set button push flag
@@ -227,19 +221,19 @@ void main() {
           // If we see button push set button push flag
           if (BUTTON11 == 0) { button11push = 1; }
           // ***** Set LED states to on or off
-          LEDY15 = 0, LEDY30 = 1, LEDR33 = 1, LEDR34 = 0, LEDR31 = 0, LEDB32 = 0, LEDB14 = 0, LEDB16 = 1, LEDB17 = 1;
+          LEDY15 = 1, LEDY30 = 1, LEDR33 = 1, LEDR34 = 0, LEDR31 = 0, LEDB32 = 0, LEDB14 = 0, LEDB16 = 1, LEDB17 = 1;
           // Delay to display previous LED state
           mDelaymS(100);
           // If we see button push set button push flag
           if (BUTTON11 == 0) { button11push = 1; }
           // ***** Set LED states to on or off
-          LEDY15 = 1, LEDY30 = 1, LEDR33 = 1, LEDR34 = 1, LEDR31 = 0, LEDB32 = 0, LEDB14 = 0, LEDB16 = 0, LEDB17 = 1;
+          LEDY15 = 1, LEDY30 = 1, LEDR33 = 1, LEDR34 = 0, LEDR31 = 0, LEDB32 = 0, LEDB14 = 0, LEDB16 = 0, LEDB17 = 1;
           // Delay to display previous LED state
           mDelaymS(100);
           // If we see button push set button push flag
           if (BUTTON11 == 0) { button11push = 1; }
           // ***** Set LED states to on or off
-          LEDY15 = 1, LEDY30 = 0, LEDR33 = 0, LEDR34 = 1, LEDR31 = 1, LEDB32 = 0, LEDB14 = 0, LEDB16 = 0, LEDB17 = 0;
+          LEDY15 = 1, LEDY30 = 1, LEDR33 = 1, LEDR34 = 1, LEDR31 = 0, LEDB32 = 0, LEDB14 = 0, LEDB16 = 0, LEDB17 = 0;
           // Delay to display previous LED state
           mDelaymS(100);
           // If we see button push set button push flag
@@ -251,14 +245,46 @@ void main() {
           // If we see button push set button push flag
           if (BUTTON11 == 0) { button11push = 1; }
           // ***** Set LED states to on or off
-          LEDY15 = 0, LEDY30 = 1, LEDR33 = 1, LEDR34 = 1, LEDR31 = 0, LEDB32 = 0, LEDB14 = 0, LEDB16 = 0, LEDB17 = 0;
+          LEDY15 = 1, LEDY30 = 0, LEDR33 = 1, LEDR34 = 1, LEDR31 = 0, LEDB32 = 0, LEDB14 = 0, LEDB16 = 0, LEDB17 = 0;
           // Delay to display previous LED state
           mDelaymS(100);
           // If we see button push set button push flag
           if (BUTTON11 == 0) { button11push = 1; }
           // ***** Set LED states to on or off
-          LEDY15 = 1, LEDY30 = 1, LEDR33 = 0, LEDR34 = 1, LEDR31 = 1, LEDB32 = 0, LEDB14 = 0, LEDB16 = 0, LEDB17 = 0;
+          LEDY15 = 1, LEDY30 = 1, LEDR33 = 1, LEDR34 = 0, LEDR31 = 1, LEDB32 = 0, LEDB14 = 0, LEDB16 = 0, LEDB17 = 0;
+          // Delay to display previous LED state
+          mDelaymS(100);
+          // If we see button push set button push flag
+          if (BUTTON11 == 0) { button11push = 1; }
+          // ***** Set LED states to on or off
+          LEDY15 = 1, LEDY30 = 1, LEDR33 = 1, LEDR34 = 1, LEDR31 = 0, LEDB32 = 0, LEDB14 = 0, LEDB16 = 0, LEDB17 = 0;
+          // Delay to display previous LED state
+          mDelaymS(100);
+          // If we see button push set button push flag
+          if (BUTTON11 == 0) { button11push = 1; }
+          // ***** Set LED states to on or off
+          LEDY15 = 1, LEDY30 = 1, LEDR33 = 1, LEDR34 = 0, LEDR31 = 1, LEDB32 = 0, LEDB14 = 0, LEDB16 = 0, LEDB17 = 0;
+          // Delay to display previous LED state
+          mDelaymS(100);
+          // If we see button push set button push flag
+          if (BUTTON11 == 0) { button11push = 1; }
+          // ***** Set LED states to on or off
+          LEDY15 = 1, LEDY30 = 1, LEDR33 = 1, LEDR34 = 1, LEDR31 = 0, LEDB32 = 0, LEDB14 = 0, LEDB16 = 0, LEDB17 = 0;
+          // Delay to display previous LED state
+          mDelaymS(100);
+          // If we see button push set button push flag
+          if (BUTTON11 == 0) { button11push = 1; }
+          // ***** Set LED states to on or off
+          LEDY15 = 1, LEDY30 = 1, LEDR33 = 0, LEDR34 = 0, LEDR31 = 1, LEDB32 = 0, LEDB14 = 0, LEDB16 = 0, LEDB17 = 0;
+          // Delay to display previous LED state
+          mDelaymS(100);
+          // If we see button push set button push flag
+          if (BUTTON11 == 0) { button11push = 1; }
+          // ***** Set LED states to on or off
+          LEDY15 = 1, LEDY30 = 1, LEDR33 = 0, LEDR34 = 1, LEDR31 = 0, LEDB32 = 0, LEDB14 = 0, LEDB16 = 0, LEDB17 = 0;
+          // *****
           // ***** End of this LED mode
+          // *****
         }
         // ********************************
         // ***** LED MODE ADJUSTMENTS *****
