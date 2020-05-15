@@ -10,6 +10,7 @@ Information about the project.
 
 -- [@alt_bier](https://twitter.com/alt_bier)  - [My Contact Info](https://gowen.net/about)
 
-## Details
+## Welcome
 
-Detailed Information about the project.
+Welcome to the 84 badge resource page.
+
