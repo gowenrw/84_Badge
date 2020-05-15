@@ -1,7 +1,16 @@
 title: 84 Badge
 description: This is the 84 Badge repository documentation
-show_downloads: true
-#theme: jekyll-theme-hacker
 remote_theme: pmarsceill/just-the-docs
+# url: "http://84badge.com" # the base hostname & protocol for your site, e.g. http://example.com
+permalink: pretty
+exclude: ["Gemfile", "Gemfile.lock", "README.md"]
 color_scheme: "dark"
 search_enabled: false
+# Set a path/url to a logo that will be displayed instead of the title
+logo: "84BadgeLogo.png"
+# Aux links for the upper right navigation
+aux_links:
+  "@alt_bier":
+    - "https://twitter.com/alt_bier"
+  altbier.us:
+    - "http://altbier.us"
