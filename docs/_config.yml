@@ -1,4 +1,7 @@
-theme: jekyll-theme-hacker
-title: 84_Badge
-description: 84_Badge
+title: 84 Badge
+description: This is the 84 Badge repository documentation
 show_downloads: true
+#theme: jekyll-theme-hacker
+remote_theme: pmarsceill/just-the-docs
+color_scheme: "dark"
+search_enabled: false
