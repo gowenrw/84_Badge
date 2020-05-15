@@ -50,7 +50,7 @@ One note on that text: I know that "Heroes" is the correct spelling.  But, it lo
 
 ## Art
 
-For the artwork I started by looking for inspiration via google image searches.  As you can imagine there were many images related to Wonder Woman, The Termination, The Last Starfighter, and George Orwell's 1984.
+For the artwork I started by looking for inspiration via google image searches.  As you can imagine there were many images related to Wonder Woman, The Terminator, The Last Starfighter, and George Orwell's 1984.
 
 ![Inspiration](ArtInspiration.JPG)
 
