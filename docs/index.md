@@ -4,13 +4,16 @@ title: Home
 
 # 84 Badge
 
-Welcome to the 84_Badge website.
+Welcome to the 84 badge resource page.
 
-Information about the project.
+This is where you will find all the details about this badge.
+
+This includes concept and art and code and cad.
+
+All the things.
+
+I hope you enjoy this badge as much as I enjoyed making it.
 
 -- [@alt_bier](https://twitter.com/alt_bier)  - [My Contact Info](https://gowen.net/about)
 
-## Welcome
-
-Welcome to the 84 badge resource page.
-
+![FrontSilk](ArtFrontSilk.JPG)

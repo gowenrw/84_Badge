@@ -10,6 +10,8 @@ search_enabled: false
 logo: "84BadgeLogo.png"
 # Aux links for the upper right navigation
 aux_links:
+  "Open the Github Repository":
+    - "https://github.com/gowenrw/84_Badge"
   "@alt_bier":
     - "https://twitter.com/alt_bier"
   altbier.us:
