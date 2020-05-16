@@ -27,7 +27,7 @@ Here are the steps I followed to get the toolchain fully set up to compile and p
 * Because this is Windows, one or more of the above installs may require a reboot.
 * Open a git-bash CLI window and edit or create a file named .bashrc in your home directory ~/ and add the following text.
 
-```
+```bash
 # SDCC compiler tools
 export PATH=$PATH:/c/Program\ Files/SDCC/bin
 
