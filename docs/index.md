@@ -16,4 +16,4 @@ I hope you enjoy this badge as much as I enjoyed making it.
 
 -- [@alt_bier](https://twitter.com/alt_bier)  - [My Contact Info](https://gowen.net/about)
 
-![FrontSilk](ArtFrontSilk.JPG)
+![FrontSilk](ArtFrontSilk_inverse.JPG)
