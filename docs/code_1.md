@@ -26,6 +26,7 @@ Here are the steps I followed to get the toolchain fully set up to compile and p
 * Download and Install the [WCHISPTOOL from the chip manufacturer wch.cn](http://wch.cn/download/WCHISPTool_Setup_exe.html) which will be used to push compiled code to the chip over USB
 * Because this is Windows, one or more of the above installs may require a reboot.
 * Open a git-bash CLI window and edit or create a file named .bashrc in your home directory ~/ and add the following text.
+
 ```
 # SDCC compiler tools
 export PATH=$PATH:/c/Program\ Files/SDCC/bin
