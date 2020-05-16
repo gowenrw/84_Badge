@@ -1,12 +1,12 @@
 ---
-title: Working with code
+title: Working with the code
 parent: Code
 nav_order: 1
 ---
 
-# The Code of the 84 Badge - Working with code
+# The Code of the 84 Badge - Working with the code
 
-In this section I will provide details on how to work with the code, get it compiled, and finally how to download that code to the Micro Controller.
+On this page I will provide details on how to work with the code, get it compiled, and finally how to download that code to the Micro Controller.
 
 ## How to program the CH55x Micro Controller
 

@@ -22,6 +22,8 @@ For the development board I just needed a quick and dirty test of the electronic
 
 The way the pins are laid out on the CH552G chip are by major pin and sub-pin (e.g. 1.1, 1.2, 3.1, 3.2, etc.).  
 
+![CH552G_Pins](CH552G_PINS.JPG)
+
 So the first things that I have to do is include the Micro Controller header file ch554.h and define the pins followed by setting the SBIT for those pins.  
 Note: SBITs refer to the bits that have SFRs (special function registers) on the Micro Controller.
 
@@ -226,6 +228,11 @@ while (1) {
 On each delay I would look for the button being pushed and if it was then I would set the variable button11push to 1 which would trigger the incrementing of the ledmode variable and the reset of the button11push variable at the end of the current LED mode loop iteration.
 
 Most of the code is in the LED mode 1 which is the default LED mode and the one with the most complex pattern for the artwork effect.
+
+In order to plan out how I wanted the LEDs to turn on or off for this LED mode I used google sheets.
+I laid out the LEDs with conditional formatting and some scripting that would spit out the bit of code needed for each LED transition.
+
+![LED_Planning](LED_Planning.JPG)
 
 I think it turned out fairly well.
 But I am looking at changing the yellow LEDs to use a PWM setting instead of simple on/off to provide more of a glowing effect.
