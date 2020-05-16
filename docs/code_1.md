@@ -35,12 +35,14 @@ export PATH=$PATH:/c/MinGW/bin
 
 alias make=mingw32-make.exe
 ```
+
 * Exit out of the git-bash CLI Window and open it up again to have it load the new .bashrc file.  It may give you a message about creating other files automatically (like .profile .bashprofile etc.)
 * Next we need to download some test code to test compiling from  [The 84 Badge github repository](https://github.com/gowenrw/84_Badge)
 * At the git-bash CLI type the following to clone this repository:
 ```
 git clone https://github.com/gowenrw/84_Badge.git
 ```
+
 * This will create a directory named 84_Badge containing all of the files.
 * Change directory to 84_Badge/code/dev/CH552G_blink/
 * You should see two files there, a Makefile and a main.c file.  You should not need to modify these files if you are using an 84 Badge or its development board.
@@ -67,10 +69,12 @@ Here are the steps I followed to get the toolchain fully set up to compile and p
 ```
 sudo apt install build-essential sdcc
 ```
+
 * Next we need to download some test code to test compiling from  [The 84 Badge github repository](https://github.com/gowenrw/84_Badge) with the following:
 ```
 git clone https://github.com/gowenrw/84_Badge.git
 ```
+
 * This will create a directory named 84_Badge containing all of the files.
 * Change directory to 84_Badge/code/dev/CH552G_blink/
 * You should see two files there, a Makefile and a main.c file.  You should not need to modify these files if you are using an 84 Badge or its development board.
@@ -86,10 +90,12 @@ Next up, USB communication to push code to the micro controller.
 ```
 sudo apt-get install libusb-1.0-0-dev
 ```
+
 * Download the open-source implementation of the WCH ISP Tool from here: [LibreCH551 Tool](https://github.com/rgwan/librech551) with the following:
 ```
 git clone https://github.com/rgwan/librech551.git
 ```
+
 * This will create a directory named librech551 containing all of the source files.
 * Change directory to librech551/usbisp/
 * You should see two files there, a Makefile and a main.c file.
