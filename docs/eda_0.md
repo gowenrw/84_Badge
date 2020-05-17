@@ -65,7 +65,7 @@ I had an idea of how I wanted the electronics of the badge to be designed, but I
 
 This would be only my second time designing a board with the CH552G chip and this would triple the number of LEDs I had previously used.
 
-In addition, I've never used components as small as the SMD 0603 before and had doubt's that I could place the parts by hand (Oh how I wish I could affort a pick and place machine).
+In addition, I've never used components as small as the SMD 0603 before and had doubt's that I could place the parts by hand (Oh how I wish I could afford a pick and place machine).
 
 The problem was that I was weeks away from having the artwork ready and needed to test my ideas sooner in case it didn't work and needed to be redesigned which might impact the artwork.
 
