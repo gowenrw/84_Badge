@@ -22,7 +22,7 @@ It also helped in my assembly since having most of the components in a small are
 
 With most of the components in the corner done I focused on placing the LEDs next.
 
-I had three different colors of LEDs grouped in different quantities to serve different purposed.  
+I had three different colors of LEDs grouped in different quantities to serve different purposes.  
 So, I had to match up the exact LED I wanted in each place within the artwork of the board.
 
 In some cases this was easy to do.
