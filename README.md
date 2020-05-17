@@ -3,6 +3,8 @@
 This is where all the files for 84_Badge will be stored.  
 This includes code and art and cad and fab files.  All the things.
 
+View the web based Documentation here https://gowenrw.github.io/84_Badge/
+
 ## File Structure
 
 This is the file structure of this repository

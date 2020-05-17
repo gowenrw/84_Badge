@@ -4,7 +4,7 @@ parent: Code
 nav_order: 1
 ---
 
-# The Code of the 84 Badge - Working with the code
+# Working with the code of the 84 Badge
 
 On this page I will provide details on how to work with the code, get it compiled, and finally how to download that code to the Micro Controller.
 
