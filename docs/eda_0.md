@@ -1,7 +1,7 @@
 ---
 title: EDA
 has_children: true
-nav_order: 4
+nav_order: 5
 ---
 
 # The EDA work on the 84 Badge

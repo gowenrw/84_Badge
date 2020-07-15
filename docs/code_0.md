@@ -1,7 +1,7 @@
 ---
 title: Code
 has_children: true
-nav_order: 3
+nav_order: 4
 ---
 
 # The Code of the 84 Badge

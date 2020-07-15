@@ -1,7 +1,7 @@
 ---
 title: Art
 has_children: true
-nav_order: 2
+nav_order: 3
 ---
 
 # The Art and Concept of the 84 Badge

@@ -1,6 +1,6 @@
 ---
 title: Images
-nav_order: 1
+nav_order: 2
 ---
 
 # Images of the badge
