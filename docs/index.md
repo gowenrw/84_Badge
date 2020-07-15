@@ -18,4 +18,7 @@ I hope you enjoy this badge as much as I enjoyed making it.
 
 ![Badge](84badge_20200707_075951_800.jpg)
 
+I did a limited run of these badges (100) and will be selling them on eBay (link coming soon).
+I will also be giving away a few.  So watch my twitter feed for giveaway details if you are interested.
+
 ![FrontSilk](ArtFrontSilk_inverse.JPG)
