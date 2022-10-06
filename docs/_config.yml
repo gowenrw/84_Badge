@@ -1,6 +1,6 @@
 title: 84 Badge
 description: This is the 84 Badge repository documentation
-remote_theme: pmarsceill/just-the-docs
+remote_theme: just-the-docs/just-the-docs
 # url: "http://84badge.com" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: pretty
 exclude: ["Gemfile", "Gemfile.lock", "README.md"]
